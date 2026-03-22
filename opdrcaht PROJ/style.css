@@ -1,3 +1,4 @@
+@import "variabels";
 .nav-link {
     list-style: none;
     
@@ -51,10 +52,13 @@ main {
     display: none;
 }
 
-/* Mobiele instellingen (Media Query) */
+
+
+
+/* Mobiele instellingen (max 768px) */
 @media (max-width: 768px) {
     .menu-icon {
-        display: block; /* Toon het icoon */
+        display: block;
         text-align: center;
         font-size: 30px;
         color: white;
@@ -63,17 +67,44 @@ main {
 
     nav ul {
         display: none; /* Verberg de links op mobiel */
-        flex-direction: column; /* Zet links onder elkaar */
+        flex-direction: column;
         text-align: center;
         background-color: lightskyblue;
         padding: 20px 0;
     }
 
-    /* Als de checkbox is aangevinkt, toon het menu */
+    /* Toon menu wanneer checkbox is aangevinkt */
     #menu-toggle:checked ~ ul {
         display: flex;
     }
 }
+
+/* Tablet (769px tot 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .menu-icon {
+        display: block;
+        text-align: center;
+        font-size: 35px; /* Iets groter op tablet */
+        color: white;
+        cursor: pointer;
+    }
+
+    /* ✅ Deze 2 regels heb ik toegevoegd */
+    nav ul {
+        display: none; /* Verberg de links op tablet */
+        flex-direction: column;
+        text-align: center;
+        background-color: lightskyblue;
+        padding: 20px 0;
+    }
+
+    #menu-toggle:checked ~ ul {
+        display: flex; /* Toon menu op tablet na aanklikken */
+    }
+}
+
+
 
 footer {
     background-color: #003366;    /* Dit maakt de donkere balk */
