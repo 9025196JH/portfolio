@@ -1,0 +1,122 @@
+@import "variabels";
+.nav-link {
+    list-style: none;
+    
+}
+
+nav {
+    background-color:lightskyblue; /* Donkergrijze achtergrond */
+    padding: 40px 0;        /* Wat ruimte boven en onder */
+}
+
+nav ul {
+    display: flex;          /* Zet de items naast elkaar */
+    justify-content: center; /* Zet het menu in het midden (of 'flex-start' voor links) */
+    list-style: none;       /* Haalt de bolletjes weg */
+    margin: 0;
+    padding: 0;
+    gap: 30px;              /* Ruimte tussen de menu-items */
+}
+
+nav ul li a {
+    font-size: 20px; /*maakt tekst grooter*/
+    text-decoration: none;  /* Haalt de onderstreping weg */
+    color: white;           /* Maakt de tekst wit */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    transition: 0.3s;       /* Maakt de kleurverandering vloeiend */
+}
+
+nav ul li a:hover {
+    color: #ff9900; /*de kleur van de hover*/        
+}
+
+/* Zet de hele pagina in een Grid */
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header boven, Main vult de rest, Footer onder */
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Grid voor de content (projecten) */
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Zet artikelen naast elkaar */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Verberg de checkbox en het icoon standaard op desktop */
+#menu-toggle, .menu-icon {
+    display: none;
+}
+
+
+
+
+/* Mobiele instellingen (max 768px) */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        text-align: center;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+
+    nav ul {
+        display: none; /* Verberg de links op mobiel */
+        flex-direction: column;
+        text-align: center;
+        background-color: lightskyblue;
+        padding: 20px 0;
+    }
+
+    /* Toon menu wanneer checkbox is aangevinkt */
+    #menu-toggle:checked ~ ul {
+        display: flex;
+    }
+}
+
+/* Tablet (769px tot 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .menu-icon {
+        display: block;
+        text-align: center;
+        font-size: 35px; /* Iets groter op tablet */
+        color: white;
+        cursor: pointer;
+    }
+
+    /* ✅ Deze 2 regels heb ik toegevoegd */
+    nav ul {
+        display: none; /* Verberg de links op tablet */
+        flex-direction: column;
+        text-align: center;
+        background-color: lightskyblue;
+        padding: 20px 0;
+    }
+
+    #menu-toggle:checked ~ ul {
+        display: flex; /* Toon menu op tablet na aanklikken */
+    }
+}
+
+
+
+footer {
+    background-color: #003366;    /* Dit maakt de donkere balk */
+    color: white;              /* Dit maakt de tekst wit */
+    padding: 20px;             /* Dit maakt de balk hoger/ruimer */
+    text-align: center;        /* Dit zet de tekst in het midden */
+    width: 100%;               /* Zorgt dat hij de hele breedte pakt */
+}
+
+/* Als je de class .footer gebruikt in HTML, doe dan dit: */
+.footer {
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
