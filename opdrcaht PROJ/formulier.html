@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="nl"> <!-- Vertelt de browser dat deze pagina in het Nederlands is -->
+<head>
+    <meta charset="UTF-8"> <!-- Zorgt ervoor dat letters met accenten (zoals é, á) goed laden -->
+    <title>Contactformulier</title> <!-- De titel die je bovenin het tabblad van de browser ziet -->
+</head>
+<body>
+
+    <main> <!-- De hoofdinhoud van deze pagina -->
+        <!-- De hoofdtitel die de bezoeker direct vertelt wat de bedoeling is -->
+        <h1>Vul uw gegevens in</h1>
+
+        <!-- Het formulier start hier. Na het verzenden stuurt het de bezoeker naar 'verzonden.html' -->
+        <form action="verzonden.html" method="GET">
+            
+            <!-- Invoerveld voor de naam van de bezoeker (verplicht) -->
+            <p>
+                <label for="naam">Naam:</label>
+                <input type="text" id="naam" name="naam" required>
+            </p>
+
+            <!-- Invoerveld voor het e-mailadres (verplicht en controleert op een geldig @-teken) -->
+            <p>
+                <label for="email">E-mailadres:</label>
+                <input type="email" id="email" name="email" required>
+            </p>
+
+            <!-- Invoerveld voor het telefoonnummer (verplicht) -->
+            <p>
+                <label for="telefoon">Telefoonnummer:</label>
+                <input type="tel" id="telefoon" name="telefoon" required>
+            </p>
+
+            <!-- De knop waarmee de bezoeker alle ingevulde gegevens daadwerkelijk verstuurt -->
+            <p>
+                <button type="submit">Versturen</button>
+            </p>
+
+        </form>
+    </main>
+
+</body>
+</html>
