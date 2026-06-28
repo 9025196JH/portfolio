@@ -1,0 +1,6 @@
+# Vertelt alle zoekmachines dat ze de website mogen scannen
+User-agent: *
+Allow: /
+
+# De officiële live locatie van jouw sitemap op GitHub Pages
+Sitemap: https://github.io
